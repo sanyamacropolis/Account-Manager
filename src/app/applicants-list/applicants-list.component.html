@@ -1,0 +1,111 @@
+<div class="row">
+  <div class="forms">
+         <form class="form-horizontal">
+           <div class="row">
+             <div class="col-md-6">
+                <div class="radio">  
+                    <label>  
+                        <input type="radio" (change)="setTable()" name="gender" value="Male" [checked]='true'>  
+                        Walkin 
+                    </label>  
+                </div>
+             </div>
+             <div class="col-md-6">
+                <div class="radio">  
+                    <label>  
+                        <input type="radio" (change)="setTable()" name="gender" value="Female">  
+                        Via Agent 
+                    </label>  
+                </div>
+             </div>
+           </div>
+              
+            <div>
+              <table  [hidden]="tableStatus" class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>S.no</th>
+                          <th>Applicant Id</th>
+                          <th>Applicant Name</th>
+                          <th>Applied Date</th>
+                          <th>Pre-med Result</th>
+                          <th>Pre-med Date</th>
+                          <th>Flight For</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>John</td>
+                          <td>Doe</td>
+                          <td>john@example.com</td>
+                          <td>John</td>
+                          <td>john@example.com</td>
+                          <td>John</td>
+                          <td>Doe</td>
+                          <td><a routerLink="status">View</a>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td>John</td>
+                              <td>Doe</td>
+                              <td>john@example.com</td>
+                              <td>John</td>
+                              <td>john@example.com</td>
+                              <td>John</td>
+                              <td>Doe</td>
+                              <td><button type="button" class="btn btn-default default_button">View</button><br>
+                          
+                              </td>    
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div>  
+                      <table [hidden]="!tableStatus" class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th>S.no</th>
+                              <th>Applicant Id</th>
+                              <th>Applicant Name</th>
+                              <th>Applied Date</th>
+                              <th>Agent Name</th>
+                              <th>Pre-med Result</th>
+                              <th>Pre-med Date</th>
+                              <th>Flight For</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>John</td>
+                              <td>Doe</td>
+                              <td>john@example.com</td>
+                              <td>John</td>
+                              <td>Doe</td>
+                              <td>john@example.com</td>
+                              <td>John</td>
+                              <td>Doe</td>
+                              <td class="buton_align"><button type="button" class="btn btn-default default_button">View</button><br>
+                                  
+                              </td>
+                            </tr>
+                            <tr>
+                                  <td>John</td>
+                                  <td>Doe</td>
+                                  <td>john@example.com</td>
+                                  <td>John</td>
+                                  <td>Doe</td>
+                                  <td>john@example.com</td>
+                                  <td>John</td>
+                                  <td>Doe</td>
+                                  <td><button type="button" class="btn btn-default default_button">View</button>
+
+                                  </td>    
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div> 
+         </form>
+         </div>
+  </div>
